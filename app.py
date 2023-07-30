@@ -15,10 +15,52 @@ config = {
   "databaseURL" : "https://y2-groupc-team1-default-rtdb.firebaseio.com/"
 }
 
+firebase = pyrebase.initialize_app(config)
+auth = firebase.auth()
+db = firebase.database()
+
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 @app.route('/donations', methods=['GET', 'POST'])
 def donate():
     return render_template('donations.html')
+
+@app.route('/merch', methods=['GET', 'POST'])
+def merch():
+    return render_template('merch.html')
+
+
+@app.route('/chatroom', methods=['GET', 'POST'])
+def chatroom():
+    if request.method == 'POST':
+        try:
+            gc_name = request.form.get('an')
+            if not gc_name:
+                raise ValueError("Groupchat name not provided in the form.")
+
+            # Create or update the artist node with the 'gc_name' key
+            db.child('Groupchats').child(gc_name).set({"Groupchat_name": gc_name})
+
+            return redirect(url_for('home', gc=gc_name))
+        except Exception as e:
+            print("Couldn't create group chat")
+            print(e)
+
+    groupchats = db.child('Groupchats').get().val()
+    groupchats_names = []
+    if groupchats:
+        groupchats = list(groupchats.values())
+        for item in groupchats:
+            # Check if 'gc_name' key exists in the item dictionary
+            if 'gc_name' in item:
+                gc_names.append(item['gc_name'])
+            else:
+                print("Artist node doesn't have 'gc_name' key:", item)
+
+    print(groupchats_names)
+    return render_template("chat.html", groupchats_names=groupchats_names)
 
 
 if __name__ == '__main__':
