@@ -15,6 +15,10 @@ config = {
   "databaseURL" : "https://y2-groupc-team1-default-rtdb.firebaseio.com/"
 }
 
+firebase = pyrebase.initialize_app(config)
+auth = firebase.auth()
+db = firebase.database()
+
 @app.route('/')
 def home():
     return render_template('index.html')
