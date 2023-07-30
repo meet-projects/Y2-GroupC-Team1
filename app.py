@@ -23,6 +23,10 @@ def home():
 def donate():
     return render_template('donations.html')
 
+@app.route('/merch', methods=['GET', 'POST'])
+def merch():
+    return render_template('merch.html')
+
 
 @app.route('/chatroom', methods=['GET', 'POST'])
 def chatroom():
