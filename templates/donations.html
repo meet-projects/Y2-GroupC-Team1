@@ -128,6 +128,49 @@
 .flex-child:first-child {
     margin-right:20px;
 } 
+email-subscription {
+      background-color: #fde8e8;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .email-subscription label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .email-subscription input[type="email"] {
+      width: 70%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    
+    .email-subscription input[type="submit"] {
+      background-color: salmon;
+      color: #fff;
+      border: none;
+      padding: 14px 30px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .email-subscription input[type="submit"]:hover {
+      background-color: #ff9999;
+    }
+
+
+
 
   </style>
 </head>
@@ -165,14 +208,14 @@
         <input type="radio" id="monthly" name="donation-type" value="monthly">
         <label for="monthly">Monthly</label>
         
-        <input type="submit" value="Donate Now">
+        <input type="submit" value="Donate ">
         <p>A represenative from our company will contanct you for more details
       </form>
     </div>
   </div>
   <div class="support-poster">
     <div class="header">
-    <h1>for other forms of donation:</h1>
+    <h1>For other forms of donation:</h1>
   </div>
   <!-- Add the option to print a poster -->
         <br>
@@ -200,7 +243,7 @@
     <h4>Buy are branded merch</h4>
         <br>
         <br>
-        <a href="/merch" class="merch-link">Explore Merch</a>
+        <a href="/merch" class="merch-link">See our merch</a>
         <br>
         <br>
         <br>
@@ -215,7 +258,27 @@
 
 </div> 
 <!-- important -->   
-      
+ <div style="text-align:center;" class="email-subscription">
+    <br>
+    <br>
+    <br>
+        <div class="header">
+    <h1>Join our emailing list!</h1>
+</div>
+    <br>
+    <br>
+        <p>Subscribe to stay updated on our latest events and initiatives gender equality.</p>
+        <form action="#" method="post">
+          <label for="email">Enter your email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          <input type="submit" value="Subscribe">
+        </form>
+      </div>
+      <br>
+      <br>
+      <br>
+      <h1>follow our socials!</h1>
+
     </div>
   </div>
 
