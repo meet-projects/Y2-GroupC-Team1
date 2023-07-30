@@ -1,31 +1,225 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <style>
-        .img {
-            margin: 3%;
-            position: relative;
-        }
-  
-        .first-txt {
-            position: absolute;
-            top: 17px;
-            left: 50px;
-        }
-  
-        .second-txt {
-            position: absolute;
-            bottom: 20px;
-            left: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Our Diverse Feminist Movement</title>
+  <style>
+    /* Add your CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: salmon;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .donation-form {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .donation-form label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    .donation-form input[type="text"],
+    .donation-form input[type="email"],
+    .donation-form select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .donation-form select {
+      height: 40px;
+    }
+    .donation-form input[type="radio"] {
+      margin-right: 5px;
+    }
+    .donation-form input[type="submit"] {
+      background-color: salmon;
+      color: #fff;
+      border: none;
+      padding: 14px 24px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .donation-form input[type="submit"]:hover {
+      background-color: #ff7f7f;
+    }
+    .description {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .donate-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .donor-story {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      margin-top: 30px;
+    }
+
+      .support-poster {
+      text-align: center;
+      margin-top: 30px;
+    /*  border: 2px dashed salmon;
+      border-radius: 10px;
+      padding: 20px;*/
+    }
+    
+    .merch-button {
+      display: block;
+      margin: 30px auto;
+      text-align: center;
+    }
+    
+    .merch-link {
+      background-color: salmon;
+      color: #fff;
+      padding: 16px 30px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 18px;
+      transition: background-color 0.3s;
+    }
+
+    .merch-link:hover {
+      background-color: #ff7f7f;
+    }
+    .flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+
+  </style>
 </head>
 <body>
-	<div class="img" >
-<!-- css: make image as header -->
-<img src="https://image.shutterstock.com/image-vector/femenism-girl-power-concept-idea-260nw-1654330066.jpg" width=100% >
-<h1 class="first-txt"> welcome to our donations page</h1>
-<h3 class="second-txt"> we appreciate your willingness to help our organization</h3>
-<div>
+  <div class="header">
+    <h1>Donate to isha L'isha</h1>
+  </div>
+
+  <div class="container">
+    <div class="donation-form">
+      <img class="donate-image" src="https://www.unwomen.org/sites/default/files/Headquarters/Images/Sections/News/Stories/2021/06/SevenWays-banner.png" alt="Donate Now">
+      <h4>Please help us support women from marganalized communities in the country!</h2>
+      <p class="description"> Your donations can help us make in impact to women's lives across the country
+     If you arent able to donate a large sum of money nut still want to support us, check out our other donation options at the bottom of the page</p>
+      <form action="#" method="post">
+        <label for="amount">Donation amount:</label>
+        <input type="text" id="amount" name="amount" placeholder="Enter the amount of your donation" required>
+        <label for="currency">Select Currency:</label>
+        <select id="currency" name="currency" required>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="NIS">NIS</option>
+          <!-- Add more currency options here -->
+        </select>
+        
+        <label for="donor-name">Your Full Name:</label>
+        <input type="text" id="donor-name" name="donor-name" placeholder="Enter your full name" required>
+        
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        
+        <label for="donation-type">Select Donation Type:</label>
+        <input type="radio" id="one-time" name="donation-type" value="one-time" checked>
+        <label for="one-time">One-time</label>
+        <input type="radio" id="monthly" name="donation-type" value="monthly">
+        <label for="monthly">Monthly</label>
+        
+        <input type="submit" value="Donate Now">
+        <p>A represenative from our company will contanct you for more details
+      </form>
+    </div>
+  </div>
+  <div class="support-poster">
+    <div class="header">
+    <h1>for other forms of donation:</h1>
+  </div>
+  <!-- Add the option to print a poster -->
+        <br>
+        <br>
+        <br>
+<div class="flex-container">
+
+  <div style="margin-left:80px ;" class="flex-child magenta">
+    <h4>post our poster in your workspace, neibourhood or educational institute</h4>
+    <br>
+        <a href="#" class="merch-link">Print Poster</a>
+        <br>
+        <br>
+        <p>Spreading are poster can help us grow our community and reach more women.<br> Its a simple way to support us that anyone can do</p>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+  
+  <div class="flex-child green">
+    <h4>buy are branded merch</h4>
+    <!-- <div class="merch-button"> -->
+        <!-- Add the button that leads to the merch page -->
+
+        <br>
+        <a href="https://www.examplemerchpage.com" class="merch-link">Explore Merch</a>
+        <br>
+        <br>
+        <br>
+        all profits go to our organization!<br> buying our merch is a more affordable way to donate to our organization
+      </div>
+  </div>
+
+ <!--  <div class="flex-child">
+    <p>gu3rewgougwlic</p>
+  </div> -->
+
+</div> 
+<!-- important -->   
+      
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Contact us at: contact@example.com | Phone: +1 123-456-7890</p>
+  </div>
 </body>
 </html>
