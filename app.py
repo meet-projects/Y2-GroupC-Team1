@@ -35,7 +35,7 @@ def donate():
 		try:
 			donation={"amount":amount,"name":name, "currency":currency, "email":currency,"types":types}
 			db.child('Donations').push(donation)
-			return redirect(url_for('ac_chat'))
+			return redirect(url_for('chatroom'))
 		except Exception as e:
 			print("Couldn't create group chat")
 			print(e)
