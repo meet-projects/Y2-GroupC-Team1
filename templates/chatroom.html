@@ -7,10 +7,10 @@
 </head>
 <body>
 
-<<h1>Join or create a groupchat!</h1>
+<h1>Join or create a groupchat!</h1>
 
-<h2>Groupchat  that already exist:</h2>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for existing  groupchats.."title="Type in an artist name">
+<h2>Groupchat fandoms that already exist:</h2>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for existing fandoms groupchats.."title="Type in an groupchat name">
 
 <ul id="myUL">
 	{% for name in groupchats_names %}   
@@ -19,8 +19,8 @@
 </ul>
 
 
-<h2>Can't find your  groupchat? Create one! </h2>
-<form method="post" action="/chatroom">
+<h2>Can't find your fandom groupchat? Create one! </h2>
+<form method="post" action="/chat">
 <div>
 	<label>Groupchat name</label>
 	<div>
@@ -55,6 +55,6 @@ function myFunction() {
 }
 </script>
 
-</body>
+
 </body>
 </html>
