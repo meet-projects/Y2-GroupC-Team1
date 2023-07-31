@@ -75,9 +75,15 @@ def chatroom():
     return render_template("chatroom.html", groupchats_names=groupchats_names)
 
 
-@app.route('/news_letter')
+@app.route('/news_letter', methods=['GET', 'POST'])
 def news_letter():
-
+    error = ""
+    if request.method == 'POST':
+        uname = request.form['name']
+        uemail = request.form['email']
+        try:
+            signed_user = {'name' : uname, 'email' : uemail}
+            db.child('Newsletter-Users').push(signed_user)
     return render_template('news-letter.html')
 
 
