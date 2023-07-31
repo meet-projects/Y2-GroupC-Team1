@@ -25,6 +25,21 @@ def home():
 
 @app.route('/donations', methods=['GET', 'POST'])
 def donate():
+    error=""
+    if request.method == 'POST':
+        name= request.form["donor-name"]
+        email= request.form["email"]
+        currency= request.form["currency"]
+        amount = request.form["amount"]
+        types = request.form["donation-type"]
+        try:
+            donation={"amount":amount,"name":name, "currency":currency, "email":currency,"types":types}
+            db.child('Donations').push(donation)
+            return redirect(url_for('chatroom'))
+        except Exception as e:
+            print("Couldn't create group chat")
+            print(e)
+
     return render_template('donations.html')
 
 @app.route('/merch', methods=['GET', 'POST'])
@@ -58,6 +73,18 @@ def chatroom():
 
     print(groupchats_names)
     return render_template("chatroom.html", groupchats_names=groupchats_names)
+
+
+@app.route('/news_letter', methods=['GET', 'POST'])
+def news_letter():
+    error = ""
+    if request.method == 'POST':
+        uname = request.form['name']
+        uemail = request.form['email']
+        try:
+            signed_user = {'name' : uname, 'email' : uemail}
+            db.child('Newsletter-Users').push(signed_user)
+    return render_template('news-letter.html')
 
 
 @app.route('/ac_chat/<string:groupchat>', methods=['GET', 'POST'])
