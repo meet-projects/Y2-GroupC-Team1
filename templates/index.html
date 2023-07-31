@@ -4,18 +4,90 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #ff69b4; /* Feminist pink */
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* White text color */
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a.active{
+    color: #AA336A;
+}
+nav a.active:hover{
+    background-color: #ff69b4;
+}
+
+nav a:hover {
+    background-: 1px 1px;
+    background-repeat: no-repeat;
+    background-color: #AA336A; /* Feminist darker pink on hover or active */
+}
+
+nav a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #fff; /* White underline */
+    transition: width 0.3s;
+}
+
+nav a.active::after,
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+}
+</style>
 </head>
 <body>
-<a href="/donations"><button>Donations</button></a>
-<a href="/merch"><button>Merch shop</button></a>
-<a href="/chatroom"><button>Chatroom</button></a>
-
-<h1>About us</h1>
-<p> 
-    Founded in 1983, “Isha L’Isha” (Woman to Woman) is a successor to the feminist women of Haifa who fought for women’s rights in the 1970s.
-    We are a community of women acting out of a desire to maintain partnership and understanding among women in Israel, regardless of religion, nationality, ethnic origin, sexual preference, or socioeconomic status.
-    “Isha L’Isha” is the oldest feminist center in Israel and a leading voice in the struggle for women’s rights in the country.
-</p>
-
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">News & Events</a></li>
+                <li><a href="#">Chatroom</a></li>
+                <li><a href="#">Donations</a></li>
+            </ul>
+        </nav>
+    </header>
 </body>
 </html>
