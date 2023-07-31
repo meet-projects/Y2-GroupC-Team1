@@ -34,6 +34,7 @@
       font-weight: bold;
       margin-bottom: 12px;
     }
+    #bla,
     .donation-form input[type="text"],
     .donation-form input[type="email"],
     .donation-form select {
@@ -141,7 +142,7 @@ email-subscription {
       font-weight: bold;
       margin-bottom: 10px;
     }
-    
+    #bla,
     .email-subscription input[type="email"] {
       width: 70%;
       padding: 12px;
@@ -169,15 +170,37 @@ email-subscription {
       background-color: #ff9999;
     }
 
-
-
-
-  </style>
-</head>
-<body>
-  <div class="header">
-    <h1>Donate to isha L'isha</h1>
-  </div>
+    body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .social-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 200px;
+            background-color: #fae1dd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .social-icons a {
+            margin: 0 20px;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+        .social-icons a img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+        .social-icons a:hover {
+            color: #666;
+        }
+    </style>
 
   <div class="container">
     <div class="donation-form">
@@ -227,7 +250,7 @@ email-subscription {
     <h4>Post our poster in your workspace, neibourhood or educational institute</h4>
     <br>
     <br>
-        <a href="#" class="merch-link">Print Poster</a>
+        <a href="static/women2women.docs.pdf" class="merch-link">Print Poster</a>
         <br>
         <br>
         <br>
@@ -270,14 +293,33 @@ email-subscription {
         <p>Subscribe to stay updated on our latest events and initiatives gender equality.</p>
         <form action="#" method="post">
           <label for="email">Enter your email:</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          <input type="email" id="email" name="email2" placeholder="Enter your email address" required><label for="email">Enter your fullname:</label>
+          <input type="text" id="bla" name="fullname2" placeholder="Enter your fullname" required>
+          <br>
           <input type="submit" value="Subscribe">
         </form>
       </div>
       <br>
       <br>
       <br>
-      <h1>follow our socials!</h1>
+      
+      <br>
+      <br>
+      <div class="social-container">
+        <h3 style="text-align:center; color:white;">follow our socials!</h3>
+         <br>
+        <div class="social-icons">
+            <a href="https://www.tiktok.com/" target="_blank">
+                <img src="tiktok_icon.png" alt="TikTok">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="instagram_icon.png" alt="Instagram">
+            </a>
+            <!-- <a href="static/instagram.png" target="_blank"> -->
+                <img src="facebook_icon.png" alt="Facebook">
+            </a>
+        </div>
+     
 
     </div>
   </div>
