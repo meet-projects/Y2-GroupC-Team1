@@ -84,6 +84,10 @@ def news_letter():
         try:
             signed_user = {'name' : uname, 'email' : uemail}
             db.child('Newsletter-Users').push(signed_user)
+            return redirect('home')
+        except Exception as e:
+            print("Couldn't signup to the news letter")
+            print(e)
     return render_template('news-letter.html')
 
 
