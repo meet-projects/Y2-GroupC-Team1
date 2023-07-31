@@ -46,6 +46,10 @@ def donate():
 def merch():
     return render_template('merch.html')
 
+@app.route ('/news&events', methods=['GET', 'POST'])
+def news_events():
+    return render_template('News and events page.html')
+
 @app.route('/chatroom', methods=['GET', 'POST'])
 def chatroom():
     if request.method == 'POST':
