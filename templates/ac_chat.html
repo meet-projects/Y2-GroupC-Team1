@@ -3,25 +3,22 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{{name}}</title>
+	<title>{{groupchat}} groupchat</title>
 </head>
 <body>
-<form action="/ac_chat/{{gc}}" method="POST">
+<form action="/ac_chat/{{groupchat}}" method="POST">
     <div>
     <label>Send a message</label>
         <input type="text" name="message" placeholder="Message..." required>
     </div>
     <button type="submit" >send</button>
 </form>
-    <a href="/chat"><button>Go to another chat</button></a>
-
-
-<h4>annonymous:</h4>
+    <a href="/chatroom"><button>Go to another chat</button></a>
 
 
 {% if chat %}
 {% for msg in chat %}
-	<h6>{{us['username']}}</h6>
+	<h6>annonymous:</h6>
 	<h5>{{chat[msg]['message']}}</h5>
 {% endfor %}
 {% endif %}
