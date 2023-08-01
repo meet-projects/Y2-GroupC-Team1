@@ -109,24 +109,5 @@ def ac_chat(groupchat):
     chat = db.child('Messages').child(groupchat).get().val()
     return render_template('ac_chat.html', groupchat=groupchat, chat=chat)
 
-@app.route('/emaillist', methods=['GET', 'POST'])
-def emaillist():
-	error=""
-	if request.method=='POST':
-		email= request.form['email2']
-		fullname= request.form['fullname2']
-        try:
-        	subscription = {'fullname' : fullname, 'email' : email}
-            db.child('suscribers').push(sibscription)
-            return redirect(url_for('donate'))
-        except:
-        	error="error"
-    return render_template('donations.html')
-
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
-
 if __name__ == '__main__':
     app.run(debug=True)
