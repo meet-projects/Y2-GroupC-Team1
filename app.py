@@ -133,9 +133,12 @@ if __name__ == '__main__':
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # >>>>>>> 77709083106eebb590ae1757b1d46a38b0bcd1d5
 if __name__ == '__main__':
 	app.run(debug=True)
+=======
+>>>>>>> ac3fa599c1b80b194d553171af67848dbab87214
 =======
 >>>>>>> ac3fa599c1b80b194d553171af67848dbab87214
 =======
