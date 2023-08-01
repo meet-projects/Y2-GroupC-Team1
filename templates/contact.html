@@ -8,15 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-     <!-- Title  -->
+    <!-- Title  -->
     <title>Isha L'Isha</title>
 
     <!-- Favicon  -->
     <link rel="icon" href="img/Logo-Isha.png">
 
-
     <!-- Style CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/style.css">
 
 </head>
 
@@ -29,6 +28,19 @@
     </div>
     <!-- Preloader End -->
 
+    <!-- Grids -->
+    <div class="grids d-flex justify-content-between">
+        <div class="grid1"></div>
+        <div class="grid2"></div>
+        <div class="grid3"></div>
+        <div class="grid4"></div>
+        <div class="grid5"></div>
+        <div class="grid6"></div>
+        <div class="grid7"></div>
+        <div class="grid8"></div>
+        <div class="grid9"></div>
+    </div>
+
     <!-- ***** Main Menu Area Start ***** -->
     <div class="mainMenu d-flex align-items-center justify-content-between">
         <!-- Close Icon -->
@@ -37,26 +49,26 @@
         </div>
         <!-- Logo Area -->
         <div class="logo-area">
-            <a href="index.html">Isha L'Isha</a>
+            <a href="index.html">Sonar</a>
         </div>
         <!-- Nav -->
         <div class="sonarNav">
             <nav>
                 <ul>
                     <li class="nav-item active">
-                        <a class="nav-link" href="services.html">Home</a>
+                        <a class="nav-link" href="templates/home.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">News & Events</a>
+                        <a class="nav-link" href="templates/news_events.html">News & Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="chatroomm.html">Chatroom</a>
+                        <a class="nav-link" href="templates/chatroom.html">Chatroom</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about-me.html">Donation</a>
+                        <a class="nav-link" href="templates/donation.html">Donation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">Merch</a>
+                        <a class="nav-link" href="templates/merch.html">Merch</a>
                     </li>
                 </ul>
             </nav>
@@ -79,7 +91,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     <div class="menu-area d-flex justify-content-between">
                         <!-- Logo Area  -->
                         <div class="logo-area">
-                            <a href="index.html">Isha L'Isha -Donation</a>
+                            <a href="index.html">Sonar</a>
                         </div>
 
                         <div class="menu-content-area d-flex align-items-center">
@@ -103,25 +115,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <!-- ***** Hero Area Start ***** -->
     <div class="hero-area d-flex align-items-center">
-        <!-- Back End Content -->
-        <div class="backEnd-content">
-            <img class="dots" src="img/core-img/dots.png" alt="">
-        </div>
-
+       
         <!-- Hero Thumbnail -->
-        <div class="hero-thumbnail aboutUs equalize bg-img" style="background-image: url(img/donate3.jpg);"></div>
+        <div class="hero-thumbnail equalize bg-img" style="background-image: url(img/bg-img/contact.jpg);"></div>
         
         <!-- Hero Content -->
-        <div class="hero-content aboutUs equalize">
+        <div class="hero-content equalize">
             <div class="container-fluid h-100">
                 <div class="row h-100 align-items-center justify-content-center">
-                    <div class="col-12 col-md-10">
+                    <div class="col-12 col-md-8">
                         <div class="line"></div>
-                        <h2>Help us support women from marganalized communities in the country!</h2>
-                        <p>
-Your donations can help us make in impact to women's lives across the country If you arent able to donate a large sum of money nut still want to support us, check out our other donation options at the bottom of the page
-</p>
-                        <a href="#" class="btn sonar-btn white-btn">contact us</a>
+                        <h2>Contact me</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel tortor facilisis, volutpat nulla placerat, tincidunt mi. Nullam vel orci dui.</p>
+                        <a href="#" class="btn sonar-btn white-btn">contact me</a>
                     </div>
                 </div>
             </div>
@@ -129,136 +135,65 @@ Your donations can help us make in impact to women's lives across the country If
     </div>
     <!-- ***** Hero Area End ***** -->
 
-    <div class="sonar-about-us-area bg-img" style="background-image: url(img/donate6.jpeg);">
-        <!-- Back End Content -->
+    <section class="sonar-contact-area section-padding-100">
+        <!-- back end content -->
         <div class="backEnd-content">
-            <h2>Isha L'Isha</h2>
+            <img class="dots" src="img/core-img/dots.png" alt="">
         </div>
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 col-md-10 col-lg-7">
-                    <div class="about-us-content bg-white">
-                        <div class="section-heading text-left wow fadeInUp" data-wow-delay="300ms">
-                            <form action="#" method="post">
-        <label for="amount">Donation amount:</label>
-        <input type="text" id="amount" name="amount" placeholder="Enter the amount of your donation" required>
-        <br>
-        <label for="currency">Select Currency:</label>
-        <select id="currency" name="currency" required>
-          <option value="USD">USD</option>
-          <option value="EUR">EUR</option>
-          <option value="NIS">NIS</option>
-          <!-- Add more currency options here -->
-        </select>
-        <br>
-        <label for="donor-name">Your Full Name:</label>
-        <input type="text" id="donor-name" name="donor-name" placeholder="Enter your full name" required>
-        <br>
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-        <br>
-        <label for="donation-type">Select Donation Type:</label>
-        <input type="radio" id="one-time" name="donation-type" value="one-time" checked>
-        <label for="one-time">One-time</label>
-        <input type="radio" id="monthly" name="donation-type" value="monthly">
-        <label for="monthly">Monthly</label>
-        <br>
         
-        <input type="submit" value="Donate ">
-        <p>A represenative from our company will contanct you for more details
-      </form>
-                        </div>
+        <div class="container">
+            <div class="row">
+                <!-- Contact Form Area -->
+                <div class="col-12">
+                    <div class="contact-form text-center">
+
+                        <h2>I am an experienced photographer</h2>
+                        <h4>Let’s talk</h4>
+
+                        <form action="#" method="post">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="contact-name" placeholder="Your Name">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="contact-email" placeholder="Your Email">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="contact-email" placeholder="Subject">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn sonar-btn">Contact Me</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Google Maps -->
+    <div class="map-area">
+        <div id="googleMap" class="googleMap"></div>
     </div>
-
-    <div class="sonar-about-us-area second-part bg-img" style="background-image: url(img/donate10.webp);">
-        <!-- Back End Content -->
-        <div class="backEnd-content">
-            <h2>Really</h2>
-        </div>
-
-        <div class="container-fluid">
-            <div class="row justify-content-end">
-                <div class="col-12 col-md-10 col-lg-7">
-                    <div class="about-us-content bg-white">
-                        <div class="section-heading text-left wow fadeInUp" data-wow-delay="300ms">
-                            <div class="line"></div>
-                        </div>
-                        <div class="support-poster">
-    <div class="header">
-    <h1>For other forms of donation:</h1>
-  </div>
-  <!-- Add the option to print a poster -->
-        <br>
-        <br>
-        <br>
-<div class="flex-container">
-
-  <div style="margin-left:80px ;" class="flex-child magenta">
-    <h4>Post our poster in your workspace, neibourhood or educational institute</h4>
-    <br>
-    <br>
-        <a href="img/women2women.docs.pdf" class="merch-link">Print Poster</a>
-        <br>
-        <br>
-        <br>
-        <p>Spreading are poster can help us grow our community and reach more women.<br> Its a simple way to support us that anyone can do</p>
-      </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-  
-  <div class="flex-child green">
-    <h4>Buy are branded merch</h4>
-        <br>
-        <br>
-        <a href="portfolio.html" class="merch-link">See our merch</a>
-        <br>
-        <br>
-        <br>
-        <br>
-        All profits go to our organization!<br> Buying our merch is a more affordable way to donate to our organization
-      </div>
-  </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-<!-- important -->   
- <div style="text-align:center;" class="email-subscription">
-    <br>
-    <br>
-    <br>
-        <div class="header">
-    <h1>Join our emailing list!</h1>
-</div>
-    <br>
-    <br>
-        <p>Subscribe to stay updated on our latest events and initiatives gender equality.</p>
-        <form action="#" method="post">
-          <label for="email">Enter your email:</label>
-          <input type="email" id="email" name="email2" placeholder="Enter your email address" required>
-          <br>
-          <label for="email">Enter your fullname:</label>
-          <input type="text" id="bla" name="fullname2" placeholder="Enter your fullname" required>
-          <br>
-          <input type="submit" value="Subscribe">
-        </form>
-      </div>
 
     <!-- ***** Footer Area Start ***** -->
     <footer class="footer-area">
         <!-- back end content -->
         <div class="backEnd-content">
             <img class="dots" src="img/core-img/dots.png" alt="">
+            <h2>Dream</h2>
         </div>
 
         <div class="container">
@@ -287,6 +222,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+    <!-- Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwuyLRa1uKNtbgx6xAJVmWy-zADgegA2s"></script>
+    <script src="js/map-active.js"></script>
 
 </body>
 
