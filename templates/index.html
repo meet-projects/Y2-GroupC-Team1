@@ -12,7 +12,7 @@
 }
 
 header {
-    background-color: #ff69b4; /* Feminist pink */
+    background-color: #985F99; /* Feminist pink */
     padding: 10px 20px;
 }
 
@@ -38,16 +38,41 @@ nav a {
 }
 
 nav a.active{
-    color: #AA336A;
+    color: #F9E0D9;
 }
 nav a.active:hover{
-    background-color: #ff69b4;
+    background-color: #DEFFF2;
 }
 
 nav a:hover {
     background-: 1px 1px;
     background-repeat: no-repeat;
-    background-color: #AA336A; /* Feminist darker pink on hover or active */
+    background-color: #F9E0D9; /* Feminist darker pink on hover or active */
+}
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* White text color */
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a.active{
+    color: #F9E0D9;
+}
+nav a.active:hover{
+    background-color: #DEFFF2;
+}
+
+nav a:hover {
+    background-: 1px 1px;
+    background-repeat: no-repeat;
+    background-color: #F9E0D9; /* Feminist darker pink on hover or active */
 }
 
 nav a::after {
@@ -82,10 +107,11 @@ nav a:hover::after {
     <header>
         <nav>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">News & Events</a></li>
-                <li><a href="#">Chatroom</a></li>
-                <li><a href="#">Donations</a></li>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/news&events">News & Events</a></li>
+                <li><a href="/chatroom">Chatroom</a></li>
+                <li><a href="/donations">Donations</a></li>
+                <li><a href="/merch">Merch</a></li>
             </ul>
         </nav>
     </header>
