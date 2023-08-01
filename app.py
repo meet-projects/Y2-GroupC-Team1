@@ -21,7 +21,7 @@ db = firebase.database()
 
 @app.route('/')
 def home():
-	return render_template('index.html')
+	return render_template('home.html')
 
 @app.route('/donations', methods=['GET', 'POST'])
 def donate():
@@ -50,7 +50,7 @@ def merch():
 
 @app.route ('/news&events', methods=['GET', 'POST'])
 def news_events():
-	return render_template('News and events page.html')
+	return render_template('news_events.html')
 
 @app.route('/chatroom', methods=['GET', 'POST'])
 def chatroom():
@@ -81,20 +81,20 @@ def chatroom():
 	return render_template("chatroom.html", groupchats_names=groupchats_names)
 
 
-@app.route('/news_letter', methods=['GET', 'POST'])
-def news_letter():
-	error = ""
-	if request.method == 'POST':
-		uname = request.form['name']
-		uemail = request.form['email']
-		try:
-			signed_user = {'name' : uname, 'email' : uemail}
-			db.child('Newsletter-Users').push(signed_user)
-			return redirect('home')
-		except Exception as e:
-			print("Couldn't signup to the news letter")
-			print(e)
-	return render_template('news-letter.html')
+# @app.route('/news_letter', methods=['GET', 'POST'])
+# def news_letter():
+# 	error = ""
+# 	if request.method == 'POST':
+# 		uname = request.form['name']
+# 		uemail = request.form['email']
+# 		try:
+# 			signed_user = {'name' : uname, 'email' : uemail}
+# 			db.child('Newsletter-Users').push(signed_user)
+# 			return redirect('home')
+# 		except Exception as e:
+# 			print("Couldn't signup to the news letter")
+# 			print(e)
+# 	return render_template('news-letter.html')
 
 
 @app.route('/ac_chat/<string:groupchat>', methods=['GET', 'POST'])
@@ -111,27 +111,23 @@ def ac_chat(groupchat):
 	chat = db.child('Messages').child(groupchat).get().val()
 	return render_template('ac_chat.html', groupchat=groupchat, chat=chat)
 
-<<<<<<< HEAD
-=======
-@app.route('/donations-second', methods=['GET', 'POST'])
-def emaillist():
-	error=""
-	if request.method=='POST':
-		email= request.form['email2']
-		fullname= request.form['fullname2']
-		try:
-			subscription = {'fullname' : fullname, 'email' : email}
-			db.child('suscribers').push(subscription)
-			return redirect(url_for('donate'))
-		except:
-			error="error"
-	return redirect(url_for('donate'))
+
+# @app.route('/donations-second', methods=['GET', 'POST'])
+# def emaillist():
+# 	error=""
+# 	if request.method=='POST':
+# 		email= request.form['email2']
+# 		fullname= request.form['fullname2']
+# 		try:
+# 			subscription = {'fullname' : fullname, 'email' : email}
+# 			db.child('suscribers').push(subscription)
+# 			return redirect(url_for('donate'))
+# 		except:
+# 			error="error"
+# 	return redirect(url_for('donate'))
 
 
 
 if __name__ == '__main__':
 	app.run(debug=True)
 
->>>>>>> 77709083106eebb590ae1757b1d46a38b0bcd1d5
-if __name__ == '__main__':
-	app.run(debug=True)
