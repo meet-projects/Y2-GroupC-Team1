@@ -42,7 +42,9 @@ def donate():
 
     return render_template('donations.html')
 
-
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    return render_template('contact.html')
 
 @app.route('/merch', methods=['GET', 'POST'])
 def merch():

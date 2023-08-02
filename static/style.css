@@ -481,7 +481,7 @@ img {
       .header-area .menu-content-area .header-social-area {
         margin-right: 15px; } }
   .header-area.sticky {
-    background-color: #232323; }
+    background-color: #8806CE; } /*here bg*/
   @media only screen and (max-width: 767px) {
     .header-area {
       padding: 10px 0; } }
@@ -496,7 +496,7 @@ img {
   height: 100%;
   top: 0;
   right: -500px;
-  background-color: #232323;
+  background-color: #8806CE;/*here bg*/
   z-index: 99999;
   text-align: center;
   -webkit-box-orient: vertical;
@@ -874,7 +874,7 @@ img {
 
 /* :: Hero Area CSS */
 .hero-area {
-  background-color: #232323;
+  background-color: #8806CE;/*here bg*/
   position: relative;
   z-index: 1;
   overflow: hidden;
