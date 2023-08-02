@@ -123,83 +123,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <div class="backEnd-content">
             <img class="dots" src="img/core-img/dots.png" alt="">
         </div>
-        <style>
-    .b1 {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-
-    h1, h2 {
-      text-align: center;
-    }
-
-    #myInput {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    li {
-      margin-bottom: 5px;
-    }
-
-    .aa {
-      display: block;
-      padding: 8px;
-      background-color: pink;
-      text-decoration: none;
-      color: #000;
-      border-radius: 4px;
-    }
-
-    .aa:hover {
-      background-color: indianred;
-    }
-
-    h2 {
-      margin-top: 30px;
-    }
-
-    form {
-      max-width: 400px;
-      margin: 0 auto;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    input[type="text"] {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-
-    input[type="submit"] {
-      padding: 10px 15px;
-      background-color: lightblue;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-      background-color: darkblue;
-    }
-  </style>
+        
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12">
@@ -207,81 +131,23 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     <!-- Single Blog Area -->
                     <div class="b1" class="single-blog-area mb-100 wow fadeInUp" data-wow-delay="300ms">
                         <!-- Post Thumbnail -->
-                        <h1 style="background-color:lightgray;">Join or create a groupchat!</h1>
-
-<h2>Groupchat fandoms that already exist:</h2>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for existing fandoms groupchats.."title="Type in an groupchat name">
-
-<ul id="myUL">
-    {% for name in groupchats_names %}   
-        <li><a class="aa" href="/ac_chat/{{name}}" >{{name}}</a> </li>
-    {% endfor %}
-</ul>
-
-
-<h2>Can't find your fandom groupchat? Create one! </h2>
-<form method="post" action="/chatroom">
-<div>
-    <label>Groupchat name</label>
+                        <form action="/ac_chat/{{groupchat}}" method="POST">
     <div>
-        <input type="text" name="an" placeholder="Groupchat name" required>
+    <label>Send a message</label>
+        <input type="text" name="message" placeholder="Message..." required>
     </div>
-</div>
-<div>
-    <input type="submit"/>
-</div>
-
+    <button type="submit" >send</button>
 </form>
+    <a href="/chatroom"><button>Go to another chat</button></a>
 
 
-
-
-<script>
-function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-</script>
-                    
-
-    </section>
-    <!-- ***** Blog Area End ***** -->
-
-    <!-- ***** Footer Area Start ***** -->
-    <footer class="footer-area">
-        <!-- back end content -->
-        <div class="backEnd-content">
-            <img class="dots" src="img/core-img/dots.png" alt="">
-            <h2>Dream</h2>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Copywrite Text -->
-                    <div class="copywrite-text">
-                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- ***** Footer Area End ***** -->
+{% if chat %}
+{% for msg in chat %}
+	<h6>annonymous:</h6>
+	<h5>{{chat[msg]['message']}}</h5>
+{% endfor %}
+{% endif %}
+<!-- ***** Footer Area End ***** -->
 
     <!-- jQuery (Necessary for All JavaScript Plugins) -->
     <script src="static/js/jquery/jquery-2.2.4.min.js"></script>
